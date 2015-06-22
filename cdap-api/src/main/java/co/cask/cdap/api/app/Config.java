@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014 Cask Data, Inc.
+ * Copyright © 2015 Cask Data, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -16,21 +16,12 @@
 
 package co.cask.cdap.api.app;
 
-import co.cask.cdap.api.annotation.Beta;
 import co.cask.cdap.api.templates.plugins.PluginConfig;
 
 /**
- * Provides access to the environment, application configuration, and application (deployment) arguments.
- *
- * @param <T> {@link PluginConfig} config class that represents the configuration of the Application.
+ * Configuration class that defines the {@link Application}'s configuration.
+ * This class will replace {@link PluginConfig}. {@link PluginConfig} has been retained for backward compatibility.
  */
-@Beta
-public interface ApplicationContext<T extends Config> {
+public class Config extends PluginConfig {
 
-  /**
-   * Get the configuration object.
-   *
-   * @return configuration object
-   */
-  T getConfig();
 }

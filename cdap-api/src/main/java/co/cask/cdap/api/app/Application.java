@@ -24,7 +24,7 @@ import co.cask.cdap.api.templates.plugins.PluginConfig;
  * @param <T> {@link PluginConfig} class that represents the configuration of the Application.
  *
  */
-public interface Application<T extends PluginConfig> {
+public interface Application<T extends Config> {
   /**
    * Configures the Application.
    *

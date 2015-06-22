@@ -17,7 +17,7 @@
 package co.cask.cdap.app;
 
 import co.cask.cdap.api.app.ApplicationContext;
-import co.cask.cdap.api.templates.plugins.PluginConfig;
+import co.cask.cdap.api.app.Config;
 
 /**
  * Default Implementation of {@link ApplicationContext}.
@@ -25,7 +25,7 @@ import co.cask.cdap.api.templates.plugins.PluginConfig;
 public class DefaultApplicationContext implements ApplicationContext {
 
   @Override
-  public PluginConfig getConfig() {
-    return null;
+  public Config getConfig() {
+    throw new UnsupportedOperationException("Default Application Context has not been implemented.");
   }
 }
